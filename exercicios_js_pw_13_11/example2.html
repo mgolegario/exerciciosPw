@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--
+    Desenvolva uma página que leia uma temperatura e converta a ela para os graus Fahrenheit ou Celsius.
+    - °F = °C × 1, 8 + 32
+    - °C = (°F − 32) ÷ 1, 8
+-->
+    <script src="example2.js"></script>
+</head>
+<body>
+    <h1>Insira uma temperatura e informe a unidade de medida dela</h1>
+    <form action="" method="post">
+        <input type="text" id="inputTemp">
+        <input onclick="calculaF()" type="button" value="Celsius"></input>
+        <input onclick="calculaC()" type="button" value="Fahrenheit"></input>
+
+    </form>
+    <div id="convertido"></div>
+    
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--
+Crie uma página que receba N valores do usuário, armazene 
+esses valores em um vetor. Crie botões para mostrar todos os v
+alores inseridos, o maior valor e o menor valor do vetor.
+    -->
+
+    <h2>Digite números (um por vez)</h2>
+    <form action="" method="post">
+        
+        <input type="text" id="inputNums" onfocus="this.value=''">
+        <input type="button" onclick="armazenaNums()" value="Enviar">
+        <input type="button" onclick="window.location.reload()" value="Limpar">
+        
+        <br><br>
+        
+        <input type="button" onclick="mostraNums()" value="Mostrar Números">
+        <input type="button" onclick="maiorNum()" value="Maior Número">
+        <input type="button" onclick="menorNum()" value="Menor Número">
+
+    </form>
+
+    <h3 id="textoNum"></h3>
+    <script src="example7.js"></script>
+</body>
+
+</html>
