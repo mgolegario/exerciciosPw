@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="../img/js_logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 
 <body>
@@ -13,16 +17,86 @@ Crie uma página que receba N valores do usuário, armazene
 esses valores em um vetor. Crie botões para mostrar todos os v
 alores inseridos, o maior valor e o menor valor do vetor.
     -->
+    <nav class="navbar navbar-expand-lg" style="background-color: #393939;">
+
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="../img/js_logo.png" alt="Logo" width="61" height="61">
+
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active texto-navbar" aria-current="page" href="#"
+                            style="color: #EFEFEF;">Home</a>
+                    </li>
+                    <li class="nav-item dropdown texto-navbar ">
+                        <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false" style="color: #EFEFEF;">
+                            Scripts
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" style="margin: 0px;" href="example1.html">Calcula Soma dos
+                                    Números
+                                    Pares</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item " style="margin: 0px;" href="example2.html">Conversor de
+                                    Temperaturas</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" style="margin: 0px;" href="example3.html">Calcula Total de
+                                    Vendas</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" style="margin: 0px;" href="example4.html">Calcula Gasto
+                                    Gasolina</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" style="margin: 0px;" href="example5.html">Calcula Assentamento
+                                    Piso</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" style="margin: 0px;" href="example6.html">Calculadora Peso
+                                    Ideal</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" style="margin: 0px;" href="example7.html">Manipulador de
+                                    Vetores</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" style="margin: 0px;" href="jogo.html">Jogo da Cobrinha</a></li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
     <h2>Digite números (um por vez)</h2>
     <form action="" method="post">
-        
+
         <input type="text" id="inputNums" onfocus="this.value=''">
         <input type="button" onclick="armazenaNums()" value="Enviar">
         <input type="button" onclick="window.location.reload()" value="Limpar">
-        
+
         <br><br>
-        
+
         <input type="button" onclick="mostraNums()" value="Mostrar Números">
         <input type="button" onclick="maiorNum()" value="Maior Número">
         <input type="button" onclick="menorNum()" value="Menor Número">
@@ -30,6 +104,9 @@ alores inseridos, o maior valor e o menor valor do vetor.
     </form>
 
     <h3 id="textoNum"></h3>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
     <script src="example7.js"></script>
 </body>
 
