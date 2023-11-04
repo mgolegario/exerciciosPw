@@ -4,7 +4,7 @@ body {
     font-family: 'Poppins'
 }
 
-nav li {
+.texto-navbar {
 
     font-size: 28px;
     padding-right: 25px;
@@ -15,4 +15,69 @@ nav a {
 
     padding-right: 25px;
 
+}
+
+main p {
+    position: relative;
+    top: 70px;
+    text-align: center;
+    word-break: break-word;
+    text-size-adjust: auto;
+
+}
+
+main p:first-child {
+    font-size: 60px;
+
+
+}
+
+main p:nth-child(2) {
+
+    font-size: 82px;
+
+}
+
+@media screen and (min-width: 511px) {
+    main p:first-child {
+        font-size: 60px;
+
+
+    }
+
+    main p:nth-child(2) {
+
+        font-size: 82px;
+
+    }
+}
+
+/* Ajusta o tamnho da fonte*/
+@media screen and (max-width: 510px) {
+    main p:first-child {
+        font-size: 40px;
+
+
+    }
+
+    main p:nth-child(2) {
+
+        font-size: 52px;
+
+    }
+}
+
+
+#carouselExampleIndicators {
+    position: relative;
+    top: 200px;
+}
+
+
+.contentSquare {
+
+    background-color: rgb(26, 26, 26);
+    height: 300px;
+    width: 300px;
+    border-radius: 30px;
 }
