@@ -4,9 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Exercícios PW | Conversor Temperaturas</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="icon" href="../img/js_logo.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <style>
+        *{
+            font-family: 'Poppins';
+        }
+    </style>
     <!--
     Desenvolva uma página que leia uma temperatura e converta a ela para os graus Fahrenheit ou Celsius.
     - °F = °C × 1, 8 + 32
@@ -89,15 +95,23 @@
         </div>
     </nav>
 
-    <h1>Insira uma temperatura e informe a unidade de medida dela</h1>
+    <div class="container">
+        <br>
+        <center>
+        <h1>Conversor de Temperaturas</h1>
+        </center>
+
+        <h2>Insira uma temperatura e informe a unidade de medida dela</h2>
     <form action="" method="post">
         <input type="text" id="inputTemp">
         <input onclick="calculaF()" type="button" value="Celsius"></input>
         <input onclick="calculaC()" type="button" value="Fahrenheit"></input>
 
     </form>
-    <div id="convertido"></div>
 
+    <hr>
+    <div id="convertido"></div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
