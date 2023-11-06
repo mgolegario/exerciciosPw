@@ -1,6 +1,6 @@
 function exibeSoma() {
     var valorInserido = parseInt(document.getElementById('inputEx1').value);
-    var valorEx1 = document.getElementById('exitEx1');
+    var valorEx1 = document.getElementById('output');
     var somaEx1 = 0;
     valorEx1.innerHTML="Os números pares até "+ valorInserido+ " são: ";
     for (let i = 1; i <= valorInserido; i++) {
@@ -16,5 +16,12 @@ function exibeSoma() {
     }
 
     valorEx1.innerHTML += '<br>A soma desses valores é ' + somaEx1 + '.';
+
+}
+
+function limpa(formulario, texto) {
+
+    formulario.reset();
+    texto.innerHTML = "";
 
 }

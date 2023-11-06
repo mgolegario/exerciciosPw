@@ -98,29 +98,31 @@
     <div class="container">
         <br>
         <center>
-            <h1>Calcula Gasto Gasolina</h1>
+            <h1><b>Calcula Gasto Gasolina</b></h1>
         </center>
         <br><br>
         <form method="post" id="form">
             <ul class="list-group list-group-horizontal-md">
                 <li class="list-group-item flex-fill">
                     <label for="valorGas">1. Insira o valor da Gasolina</label>
-                    <input type="number" step="0.01" id="valorGas" class="form-control">
+                    <input type="number" step="0.01" id="valorGas" class="form-control" placeholder="Insira um Número. Ex: 4...">
                 </li>
                 <br>
                 <li class="list-group-item flex-fill">
-                    <label for="kmsAndados">2. Insira a quilometragem andada</label>
-                    <input type="number" step="0.01" id="kmsAndados" class="form-control">
+                    <label for="kmsAndados">2. Insira a quilometragem andada ou a andar</label>
+                    <input type="number" step="0.01" id="kmsAndados" class="form-control" placeholder="Insira um Número. Ex: 8...">
                 </li>
             </ul>
             <br>
             <center>
-                <input class="btn btn-primary mx-auto p-2.5" type="submit" value="Enviar">
+                <input class="btn btn-primary mx-auto p-2.5" type="submit" value="Calcular">
+                <input class="btn btn-primary mx-auto p-2.5" type="button" onclick="limpa(this.form, document.getElementById('output'))" value="Limpar">
             </center>
 
         </form>
         <hr>
-        <h4 id="resultadoGasKm"></h4>
+        <h3>Resultado:</h3>
+        <h4 id="output"></h4>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"

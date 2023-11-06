@@ -1,19 +1,39 @@
-var resultado = 0;
+var form = document.getElementById('form');
 
-function calculaC() {
-    //(°F − 32) ÷ 1, 8
-    document.getElementById('convertido').innerHTML = "";
-    var temp = parseFloat(document.getElementById('inputTemp').value);
-    resultado = (temp - 32) / 1.8;
-    document.getElementById('convertido').innerHTML += "A conversão de " + temp + "°F para graus Celsius seria " + resultado.toFixed(1) + '°C.';
+form.addEventListener('submit', function (event) {
+
+    event.preventDefault();
+
+    var valorTemp = document.getElementById('inputTemp').value;
+
+    const radioButtons = document.querySelectorAll('input[name="unidadeMedida"]');
+
+    for (const radioButton of radioButtons) {
+
+        if (radioButton.checked) {
+
+            var unidadeTemp = radioButton.value;
+            break;
+        }
+
+    }
+
+    var textoResultado = document.getElementById('output');
+    if (unidadeTemp == '°C') {
+        // °C × 1, 8 + 32
+        let resultado = valorTemp * 1.8 + 32;
+        textoResultado.innerHTML = "A conversão de " + valorTemp + "°C para graus Fahrenheit seria " + resultado.toFixed(1) + '°F.';
+    } else {
+        //(°F − 32) ÷ 1, 8
+        let resultado = (valorTemp - 32) / 1.8;
+        textoResultado.innerHTML = "A conversão de " + valorTemp + "°F para graus Celsius seria " + resultado.toFixed(1) + '°C.';
+    }
+
+});
+
+function limpa(formulario, texto) {
+
+    formulario.reset();
+    texto.innerHTML = "";
+
 }
-function calculaF() {
-    // °C × 1, 8 + 32
-    document.getElementById('convertido').innerHTML = "";
-    var temp = parseFloat(document.getElementById('inputTemp').value);
-    resultado = temp * 1.8 + 32;
-    document.getElementById('convertido').innerHTML += "A conversão de " + temp + "°C para graus Fahrenheit seria " + resultado.toFixed(1) + '°F.';
-}
-
-
-

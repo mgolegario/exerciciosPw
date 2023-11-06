@@ -27,7 +27,7 @@ form.addEventListener('submit', function (event) {
     var thirdProdVenda = thirdProd.valor * thirdProdQuant;
     var valorTotal = firstProdVenda + secProdVenda + thirdProdVenda;
 
-    var divResultado = document.getElementById('somaValores')
+    var divResultado = document.getElementById('output')
 
     divResultado.innerHTML = "O " + firstProd.nome+ " vendeu R$" + firstProdVenda +
         ".<br>" + "O " + secProd.nome+ " vendeu R$" + secProdVenda + ".<br>" +
@@ -35,3 +35,10 @@ form.addEventListener('submit', function (event) {
         "O total das vendas foi R$" + valorTotal + ".";
 
 });
+
+function limpa(formulario, texto) {
+
+    formulario.reset();
+    texto.innerHTML = "";
+
+}
