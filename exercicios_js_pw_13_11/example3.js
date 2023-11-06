@@ -1,61 +1,37 @@
+var form = document.getElementById('form');
 
-var faseFormulario = 0;
-var qualProd = 0;
-var nomeProds = [];
-var valorProds = [];
-var quantProds = [];
-var textoProd = document.getElementById('textoProd');
-var infoProd = "o nome";
+form.addEventListener('submit', function (event) {
+    event.preventDefault();
 
+    var firstProd = {
+        nome: document.getElementById('firstProdName').value,
+        valor: document.getElementById('firstProdValor').value
 
-function registraProd() {
+    };
 
+    var firstProdQuant = document.getElementById('firstProdQuant').value;
+    var secProd = {
+        nome: document.getElementById('secProdName').value,
+        valor: document.getElementById('secProdValor').value
 
+    };
+    var secProdQuant = document.getElementById('secProdQuant').value;
+    var thirdProd = {
+        nome: document.getElementById('thirdProdName').value,
+        valor: document.getElementById('thirdProdValor').value
+    };
+    var thirdProdQuant = document.getElementById('thirdProdQuant').value;
 
-    if (qualProd < 3) {
-        var conteudoProd = document.getElementById('conteudoProd').value;
+    var firstProdVenda = firstProd.valor * firstProdQuant;
+    var secProdVenda = secProd.valor * secProdQuant;
+    var thirdProdVenda = thirdProd.valor * thirdProdQuant;
+    var valorTotal = firstProdVenda + secProdVenda + thirdProdVenda;
 
+    var divResultado = document.getElementById('somaValores')
 
-        switch (faseFormulario) {
-            case 0: nomeProds.push(conteudoProd); infoProd = "o valor"; break;
+    divResultado.innerHTML = "O " + firstProd.nome+ " vendeu R$" + firstProdVenda +
+        ".<br>" + "O " + secProd.nome+ " vendeu R$" + secProdVenda + ".<br>" +
+        "O " + thirdProd.nome+ " vendeu R$" + thirdProdVenda + ".<br>" +
+        "O total das vendas foi R$" + valorTotal + ".";
 
-
-            case 1: valorProds.push(conteudoProd); infoProd = "a quantidade"; break;
-
-            case 2:
-                quantProds.push(conteudoProd);
-                faseFormulario = -1;
-                infoProd = "o nome";
-                qualProd++;
-                break;
-
-        }
-
-
-        faseFormulario++;
-    }
-
-    if (qualProd == 3) { somaProds(); }
-
-
-    switch (qualProd) {
-
-        case 0: textoProd.innerHTML = "Insira " + infoProd + " do primeiro produto"; break;
-        case 1: textoProd.innerHTML = "Insira " + infoProd + " do segundo produto"; break;
-        case 2: textoProd.innerHTML = "Insira " + infoProd + " do terceiro produto"; break;
-
-    }
-
-
-}
-
-function somaProds() {
-
-    let valorTotal = (valorProds[0] * quantProds[0]) + (valorProds[1] * quantProds[1]) + (valorProds[2] * quantProds[2]);
-
-    document.getElementById('somaValores').innerHTML = "O valor total das vendas dos produtos:<br>- " + nomeProds[0] + "<br>- " + nomeProds[1] + "<br>- " + nomeProds[2] +
-        "<br> É igual a R$" + valorTotal + ".";
-
-}
-
-
+});

@@ -1,36 +1,14 @@
-var textoGasKm = document.getElementById('textoGasKm');
-var qualTextoGasKm = 0;
-var valorComb = 0;
-var kmsAndados = 0;
-var qualInputGasKm = 0;
+var form = document.getElementById('form');
 
-function processaGasKm() {
+form.addEventListener('submit', function (event) {
+    event.preventDefault();
 
+    var valorGas = document.getElementById('valorGas').value;
+    var kmsAndados = document.getElementById('kmsAndados').value;
 
-    var inputGasKm = document.getElementById('inputGasKm').value;
+    var valorFinal = (kmsAndados / 8) * valorGas;
 
-    switch (qualInputGasKm) {
+    let divResultado = document.getElementById('resultadoGasKm');
+    divResultado.innerHTML = "O gasto total com a viagem é de R$" + valorFinal;
 
-        case 0: valorComb = inputGasKm; qualTextoGasKm++; break;
-        case 1: kmsAndados = inputGasKm; break;
-
-    }
-
-    switch (qualTextoGasKm) {
-        case 0: textoGasKm.innerHTML = "Insira o valor da Gasolina"; break;
-        case 1: textoGasKm.innerHTML = "Insira a quilometragem andada"; break;
-
-    }
-
-    qualInputGasKm++;
-
-    if (qualInputGasKm == 2) { calculaGasKm(); };
-
-}
-
-function calculaGasKm() {
-
-    let valorFinal = (kmsAndados / 8) * valorComb;
-    document.getElementById('resultadoGasKm').innerHTML = "Sabendo que o veículo percorre 8km/l o gasto dessa viagem foi de R$" + valorFinal.toFixed(2) + ".";
-
-}
+});
