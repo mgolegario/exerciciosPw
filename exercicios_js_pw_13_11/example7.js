@@ -1,4 +1,22 @@
-var textoNum = document.getElementById('textoNum');
+form = document.getElementById('form');
+
+form.addEventListener('submit', function(e){
+
+    event.preventDefault();
+
+    var numeros = document.getElementById('inputNums').value.split(',').map(str => str.trim());
+    for (let i=0; i < inputNums.length; i++){
+        numeros[i]=parseInt(numeros[i]);
+    }
+
+})
+
+
+
+
+
+
+/*var textoNum = document.getElementById('textoNum');
 var nums = [];
 
 function armazenaNums() {
@@ -41,3 +59,4 @@ function menorNum() {
 
     textoNum.innerHTML += "<br> O menor número inserido foi: " + menorNum + ".";
 }
+*/
