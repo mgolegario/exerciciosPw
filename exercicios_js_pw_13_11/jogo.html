@@ -5,14 +5,13 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../style.css">
+    <title>Exercícios Pw | Jogo da Cobrinha</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
     <link rel="icon" href="../img/js_logo.png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
@@ -88,17 +87,45 @@
     </nav>
 
     <br>
-    <center>
-        <h1>Snake</h1>
-        <br>
-        <h4></h4>
-        <canvas id="board"></canvas>
-        <br>
-        <br>
-        <input type="button" id="mudaVel" value="Mudar Velocidade">
-        <input type="button" id="restart" value="Reiniciar">
-        <h3 id="qualVel"></h3>
-    </center>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg">
+                <center>
+                <h1><b>Snake</b></h1>
+        
+                    <canvas id="board"></canvas>
+                </center>
+            </div>
+            <div class="col-lg my-5">
+                <div class="row">
+                    <div class="col">
+                        <h3 id="qualVel"></h3>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4></h4>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="button" id="mudaVel" value="Velocidade">
+                    </div>
+                    <div class="col-md-3">
+                        <input type="button" id="restart" value="Reiniciar">
+                    </div>
+                </div>
+                <br><br>
+                    <ul>
+                   <li> <h5>Defina a <b>velocidade</b> antes de <b>começar</b> a partida.</h5></li>
+                  <li> <h5>Use as <b>setinhas</b> para jogar.</h5></li> 
+                <li>  <h5>Após <b>apertar</b> a setinha pela primeira vez, a <b>rolagem</b> da pagina será <b>travada</b> até o fim da partida.</h5></li> 
+            <li>  <h5>Divirta-se!</h5></li> 
+                   
+                    </ul>
+            </div>
+        </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>

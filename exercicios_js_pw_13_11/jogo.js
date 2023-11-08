@@ -1,6 +1,6 @@
 var blockSize = 25;
-var rows = 20;
-var cols = 20;
+var rows = 15;
+var cols = 15;
 var board;
 var context;
 
@@ -18,11 +18,15 @@ var foodY;
 var gameOver = false;
 var gameVel = 65;
 
+var isPlaying = false;
 
 var intervalo;
 var score = 0;
-$('h4').append('Pontuação: ' + score)
+$('h4').append('<b>Pontuação: ' + score + '</b>')
+$('h4').addClass('my-1')
 
+$('#mudaVel').addClass('btn btn-primary')
+$('#restart').addClass('btn btn-primary')
 
 $('#restart').on('click', restart)
 
@@ -43,14 +47,14 @@ function changeVel() {
         gameVel = 65;
 
         $('h3').empty();
-        $('h3').append("Velocidade: Rápida")
+        $('h3').append("Velocidade:<b> Rápida</>")
 
     }
     else if (gameVel == 65) {
         gameVel = 95;
 
         $('h3').empty();
-        $('h3').append("Velocidade: Lenta")
+        $('h3').append("Velocidade:<b> Normal</b>")
 
     }
 
@@ -74,7 +78,8 @@ window.onload = function () {
 
 function gameOverf() {
     $('body').css({ 'background-color': 'rgb(199, 2, 2)' })
-    alert('GAME OVER')
+    isPlaying = false;
+
 }
 
 
@@ -98,7 +103,7 @@ function update() {
         snakeBody.push([foodX, foodY]);
         score++;
         $('h4').empty();
-        $('h4').append('Pontuação: ' + score)
+        $('h4').append('<b>Pontuação: ' + score + '</b>')
         placeFood();
 
     }
@@ -137,23 +142,35 @@ function update() {
 
     }
 
+    if (isPlaying) {
+        $('body').addClass('stop-scrolling');
+    }else{
+        $('body').removeClass('stop-scrolling');
+    }
+  
 }
 
 
 function changeDirection(e) {
+  
+
     if (e.code == "ArrowUp" && velocityY != 1) {
+        isPlaying = true;
         velocityX = 0;
         velocityY = -1;
     }
     else if (e.code == "ArrowDown" && velocityY != -1) {
+        isPlaying = true;
         velocityX = 0;
         velocityY = 1;
     }
     else if (e.code == "ArrowLeft" && velocityX != 1) {
+        isPlaying = true;
         velocityX = -1;
         velocityY = 0;
     }
     else if (e.code == "ArrowRight" && velocityX != -1) {
+        isPlaying = true;
         velocityX = 1;
         velocityY = 0;
     }

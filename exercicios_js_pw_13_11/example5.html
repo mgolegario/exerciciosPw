@@ -12,10 +12,10 @@
             font-family: 'Poppins';
         }
     </style>
-    <link rel="stylesheet" href="../style.css">
     <link rel="icon" href="../img/js_logo.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
@@ -90,38 +90,39 @@
         </div>
     </nav>
 
-<div class="container">
-    <br>
-    <center>
-        <h1>Calcula custo para assentar piso</h1>
-    </center>
+    <div class="container">
+        <br>
+        <center>
+            <h1><b>Calcula custo para assentar piso</b></h1>
+        </center>
 
-    <br><br>
+        <br>
 
-            <form method="post" id="form">
-                <ul class="list-group list-group-horizontal-md">
-                    <li class="list-group-item flex-fill">
-                <label for="compPiso">1. Insira o comprimento do piso (em metros)</label>
-                <input type="number" id="compPiso" step="0.01" class="form-control" placeholder="Ex: 70,32...">
-            </li>
-            <li class="list-group-item flex-fill">
-                <label for="largPiso">2. Insira a largura do piso (em metros)</label>
-                <input type="number" id="largPiso" step="0.01" class="form-control" placeholder="Ex: 20,92...">
-            </li>
-                </ul>
-                <center>
+        <form method="post" id="form">
+            <ul class="list-group list-group-horizontal-md">
+                <li class="list-group-item flex-fill">
+                    <label for="compPiso">1. Insira o comprimento do piso (em metros)</label>
+                    <input type="number" id="compPiso" step="0.01" class="form-control" placeholder="Ex: 70,32...">
+                </li>
+                <li class="list-group-item flex-fill">
+                    <label for="largPiso">2. Insira a largura do piso (em metros)</label>
+                    <input type="number" id="largPiso" step="0.01" class="form-control" placeholder="Ex: 20,92...">
+                </li>
+            </ul>
+            <center>
                 <input class="btn btn-primary mx-auto p-2.5 mt-3" type="submit" value="Calcular">
-                <input class="btn btn-primary mx-auto p-2.5 mt-3" type="button" onclick="limpa(this.form, document.getElementById('output'))" value="Limpar">
+                <input class="btn btn-primary mx-auto p-2.5 mt-3" type="button"
+                    onclick="limpa(this.form, document.getElementById('output'))" value="Limpar">
             </center>
-            </form>
-            <hr>
-            <h3>Resultado:</h3>
-            <h4 id="output"></h4>
-        </div>
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-                integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-                crossorigin="anonymous"></script>
-            <script src="example5.js"></script>
+        </form>
+        <hr>
+        <h3>Resultado:</h3>
+        <h4 id="output"></h4>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="example5.js"></script>
 </body>
 
 </html>
