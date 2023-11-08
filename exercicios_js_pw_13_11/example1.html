@@ -100,30 +100,24 @@
         <br><br>
 
         <form method="post">
-            
-            <div class="row d-flex justify-content-between">
-                <div class="col-8">
-                    <ul class="list-group list-group-horizontal-xs ">
-                        <li class="list-group-item">
-                            <label for="inputEx1">Insira um número maior do que 1</label>
-                            <input type="number" class="form-control" id="inputEx1" placeholder="Insira um Número. Ex: 10...">
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-4">
 
-                    <input onclick="exibeSoma()" type="button" value="Calcular" class="btn btn-primary mt-1" style="width: 100%;">
 
-                    <br>
-                    <input class="btn btn-primary mx-auto p-2.5 mt-1" type="button"
-                        onclick="limpa(this.form, document.getElementById('output'))" value="Limpar" style="width: 100%;">
+            <ul class="list-group list-group-horizontal-xs ">
+                <li class="list-group-item">
+                    <label for="inputEx1">Insira um número maior do que 1</label>
+                    <input type="number" class="form-control" id="inputEx1" placeholder="Ex: 10...">
+                </li>
+            </ul>
 
-                </div>
-            </div>
-      
+
+            <center>
+                <input onclick="exibeSoma()" type="button" value="Calcular" class="btn btn-primary mt-4">
+                <input class="btn btn-primary mx-auto p-2.5 mt-4" type="button"
+                    onclick="limpa(this.form, document.getElementById('output'))" value="Limpar">
+            </center>
+
+
         </form>
-        <br>
-
         <hr>
         <h3>Resultado:</h3>
         <h4 id="output"></h4>

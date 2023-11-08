@@ -103,17 +103,18 @@
             <ul class="list-group list-group-horizontal-sm ">
                 <li class="list-group-item flex-fill">
                     <label for="inputTemp">1. Insira uma temperatura</label>
-                    <input type="number" class="form-control" id="inputTemp" placeholder="Insira um Número. Ex: 5...">
+                    <input type="number" class="form-control my-2" id="inputTemp" placeholder="Ex: 25...">
                 </li>
                 <li class="list-group-item flex-fill">
                     <label for="unidadeMedida">2. Selecione a unidade de medida do valor acima</label>
                     <br>
-                    <div class="my-2">
-                        <input type="radio" name="unidadeMedida" value="°C" id="celcius">
-                        <label for="celcius">°C</label>
-
-                        <input type="radio" name="unidadeMedida" value="°F" id="fahrenheit">
-                        <label for="fahrenheit">°F</label>
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" name="unidadeMedida" value="°C" id="celcius">
+                        <label for="celcius" class="form-check-label">°C</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" name="unidadeMedida" value="°F" id="fahrenheit">
+                        <label for="fahrenheit" class="form-check-label">°F</label>
                     </div>
                 </li>
             </ul>
